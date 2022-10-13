@@ -2,13 +2,14 @@
 for (let i = 0; i < randomNumbers.length; i++) {
     alert(i);
     
-}
+}/*
 document.getElementById("numbers").innerHTML = 
 Math.floor(Math.random() * 100); */
 
 const randomNumbers = [ ];
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 5; i++) {
     randomNumbers.push(Math.floor(Math.random() * 100));
+    if(randomNumbers.indexOf(i) === -1) randomNumbers.push(i);
   }
 document.getElementById("numbers").innerHTML = randomNumbers;
 
