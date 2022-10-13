@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+div {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    
+}

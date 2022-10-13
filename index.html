@@ -10,8 +10,42 @@
 <body>
     
 
-    <p id="numbers"></p>
+    <p id="numbers1"></p>
+   
 
+    <div class="form">
+
+    <form action="#" onsubmit="validera()">
+
+    <div class="use">
+    <label for="Username">Username</label>
+    <input type="text" id="user" name="user">
+    </div>
+
+    <div class="mail">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email">
+    </div>
+
+    <div class="pass">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    </div>
+
+    <div class="repass">
+    <label for="password">Repeat Password</label>
+    <input type="repassword" id="repassword" name="repassword">
+    </div>
+
+    <div class="check">
+    <label for="terms">Agree to the terms of service</label>
+    <input type="checkbox" id="terms" name="terms">
+    </div>
+    <input type="submit" value="Submit">
+
+    </form>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
