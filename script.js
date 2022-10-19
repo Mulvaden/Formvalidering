@@ -1,28 +1,52 @@
-/* const randomNumbers = [ ];
-for (let i = 0; i < randomNumbers.length; i++) {
-    alert(i);
-    
-}/*
-document.getElementById("numbers").innerHTML = 
-Math.floor(Math.random() * 100); */
-
-var min = 1
-var max = 100
-const randomNumbers = [ ];
-for (let i = 0; i < 10; i++) {
-    randomNumbers.push(Math.floor(Math.random() * (max - min + 1)));
-    if(!randomNumbers.indexOf(i) === 1) randomNumbers.push(i);
-  } randomNumbers.sort();
-
+var randomNumbers = [ ];
+while(randomNumbers.length < 10){
+    var i = Math.floor(Math.random()* 100) + 1;
+    if(randomNumbers.indexOf(i) === -1) randomNumbers.push(i);
+}randomNumbers.sort((a, b) => a - b);
 document.getElementById("numbers").innerHTML = randomNumbers;
 
 
-//for loop som kör tills Array är 10
-//om randomNumbers inte finns i Array
-//lägg till randomNumbers i Array med push
+
 
 
 const validera = () => {
     let user = document.getElementById("user").value;
     console.log("Username: " + user);
 }
+
+
+function checkPassword()
+{
+    var password = document.getElementById('password');
+    var repassword = document.getElementById('repassword');
+    var message = document.getElementById('error');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+ 	
+    if(password.value.length > 5)
+    {
+        password.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "character number ok!"
+    }
+    else
+    {
+        password.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " you have to enter at least 6 digit!"
+        return;
+    }
+  
+    if(password.value == repassword.value)
+    {
+        repassword.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "ok!"
+    }
+	else
+    {
+        repassword.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " These passwords don't match"
+    }
+}  

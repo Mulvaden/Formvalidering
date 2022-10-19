@@ -34,8 +34,10 @@
 
     <div class="repass">
     <label for="repassword">Repeat Password</label>
-    <input type="password" id="repassword" name="repassword">
+    <input type="password" id="repassword" name="repassword" onkeyup="checkPassword(); return false;">
     </div>
+
+    <div id="error"></div>
 
     <div class="check">
     <label for="terms">Agree to the terms of service</label>
